@@ -34,7 +34,7 @@ public class ExportarPlanilha {
 
 		REG_F120DAOImpl rEG_F120DAO = new REG_F120DAOImpl();
 		REG_A170DAOImpl rEG_A170DAO = new REG_A170DAOImpl();
-		//REG_C170DAOImpl rEG_C170DAO = new REG_C170DAOImpl();
+		REG_C170DAOImpl rEG_C170DAO = new REG_C170DAOImpl();
 		REG_C501DAOImpl rEG_C501DAO = new REG_C501DAOImpl();
 		REG_C505DAOImpl rEG_C505DAO = new REG_C505DAOImpl();
 		REG_D101DAOImpl rEG_D101DAO = new REG_D101DAOImpl();
@@ -46,10 +46,10 @@ public class ExportarPlanilha {
 		List<REG_A170> rEG_A170 = new ArrayList<REG_A170>(rEG_A170DAO.listar(REG_A170.class));
 		List<REG_C505> rEG_C505 = new ArrayList<REG_C505>(rEG_C505DAO.listar(REG_C505.class));
 		List<REG_C501> rEG_C501 = new ArrayList<REG_C501>(rEG_C501DAO.listar(REG_C501.class));
-		//List<REG_C170> rEG_C170 = new ArrayList<REG_C170>(rEG_C170DAO.listar(REG_C170.class));
+		List<REG_C170> rEG_C170 = new ArrayList<REG_C170>(rEG_C170DAO.listar(REG_C170.class));
 
 		System.out.println("Inicio da Exportação");
-		WritableWorkbook workbook = Workbook.createWorkbook(new File("d:\\teste.xls"));		
+		WritableWorkbook workbook = Workbook.createWorkbook(new File("d:\\pla_16_17.xls"));		
 		
 		WritableSheet sheet = workbook.createSheet("REG F120", 0);
 		
@@ -392,7 +392,6 @@ public class ExportarPlanilha {
 			size++;
 		}
 		
-		/*
 		sheet = workbook.createSheet("REG C170", 6);
 		Label lbC1700 = new Label(0, 0, "NOME_PART");
 		Label lbC1701 = new Label(1, 0, "CNPJ/CPF");
@@ -503,7 +502,6 @@ public class ExportarPlanilha {
 			sheet.addCell(lb26);
 			size++;
 		}
-		*/
 		
 		workbook.write();
 		workbook.close();

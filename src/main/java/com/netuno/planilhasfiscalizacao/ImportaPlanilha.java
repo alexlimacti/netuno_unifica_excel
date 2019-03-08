@@ -62,49 +62,52 @@ public class ImportaPlanilha {
 						
 						REG_A170 a = new REG_A170();
 						Cell celula0 = sheet.getCell(0, i);
-						a.setCnpj_cpf(celula0.getContents());
-
+						a.setNome_part(celula0.getContents());
+						
 						Cell celula1 = sheet.getCell(1, i);
-						a.setSer(celula1.getContents());
+						a.setCnpj_cpf(celula1.getContents());
 
 						Cell celula2 = sheet.getCell(2, i);
-						a.setNum_doc(celula2.getContents());
+						a.setSer(celula2.getContents());
 
 						Cell celula3 = sheet.getCell(3, i);
-						a.setDt_doc(celula3.getContents());
+						a.setNum_doc(celula3.getContents());
 
 						Cell celula4 = sheet.getCell(4, i);
-						a.setDt_exe_serv(celula4.getContents());
+						a.setDt_doc(celula4.getContents());
 
 						Cell celula5 = sheet.getCell(5, i);
-						a.setVl_doc(celula5.getContents());
+						a.setDt_exe_serv(celula5.getContents());
 
 						Cell celula6 = sheet.getCell(6, i);
-						a.setDescr_item(celula6.getContents());
+						a.setVl_doc(celula6.getContents());
 
 						Cell celula7 = sheet.getCell(7, i);
-						a.setCst_pis(celula7.getContents());
+						a.setDescr_item(celula7.getContents());
 
 						Cell celula8 = sheet.getCell(8, i);
-						a.setVl_bc_pis(celula8.getContents());
+						a.setCst_pis(celula8.getContents());
 
 						Cell celula9 = sheet.getCell(9, i);
-						a.setAliq_pis(celula9.getContents());
+						a.setVl_bc_pis(celula9.getContents());
 
 						Cell celula10 = sheet.getCell(10, i);
-						a.setVl_pis(celula10.getContents());
+						a.setAliq_pis(celula10.getContents());
 
 						Cell celula11 = sheet.getCell(11, i);
-						a.setVl_bc_cofins(celula11.getContents());
+						a.setVl_pis(celula11.getContents());
 
 						Cell celula12 = sheet.getCell(12, i);
-						a.setAliq_confis(celula12.getContents());
+						a.setVl_bc_cofins(celula12.getContents());
 
 						Cell celula13 = sheet.getCell(13, i);
-						a.setVl_cofins(celula13.getContents());
+						a.setAliq_confis(celula13.getContents());
 
 						Cell celula14 = sheet.getCell(14, i);
-						a.setCod_cta(celula14.getContents());
+						a.setVl_cofins(celula14.getContents());
+
+						Cell celula15 = sheet.getCell(15, i);
+						a.setCod_cta(celula15.getContents());
 						
 						rEG_A170DAO.salvar(a);
 					}
@@ -124,40 +127,40 @@ public class ImportaPlanilha {
 						a.setSer(celula2.getContents());
 
 						Cell celula3 = sheet.getCell(3, i);
-						a.setSer(celula3.getContents());
+						a.setNum_doc(celula3.getContents());
 
 						Cell celula4 = sheet.getCell(4, i);
-						a.setNum_doc(celula4.getContents());
+						a.setDt_doc(celula4.getContents());
 
 						Cell celula5 = sheet.getCell(5, i);
-						a.setDt_doc(celula5.getContents());
+						a.setDt_e_s(celula5.getContents());
 
 						Cell celula6 = sheet.getCell(6, i);
-						a.setDt_e_s(celula6.getContents());
+						a.setVl_doc(celula6.getContents());
 
 						Cell celula7 = sheet.getCell(7, i);
-						a.setVl_doc(celula7.getContents());
+						a.setVl_merc(celula7.getContents());
 
 						Cell celula8 = sheet.getCell(8, i);
-						a.setVl_merc(celula8.getContents());
+						a.setDescr_item(celula8.getContents());
 
 						Cell celula9 = sheet.getCell(9, i);
-						a.setDescr_item(celula9.getContents());
+						a.setNcm(celula9.getContents());
 
 						Cell celula10 = sheet.getCell(10, i);
-						a.setNcm(celula10.getContents());
+						a.setVl_item(celula10.getContents());
 
 						Cell celula11 = sheet.getCell(11, i);
-						a.setVl_item(celula11.getContents());
+						a.setCfop(celula11.getContents());
 
 						Cell celula12 = sheet.getCell(12, i);
-						a.setCfop(celula12.getContents());
+						a.setVl_bc_icms(celula12.getContents());
 
 						Cell celula13 = sheet.getCell(13, i);
-						a.setVl_bc_icms(celula13.getContents());
+						a.setCst_pis(celula13.getContents());
 
 						Cell celula14 = sheet.getCell(14, i);
-						a.setCst_pis(celula14.getContents());
+						a.setVl_bc_pis(celula14.getContents());
 
 						Cell celula15 = sheet.getCell(15, i);
 						a.setAliq_pis(celula15.getContents());
